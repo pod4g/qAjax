@@ -39,7 +39,7 @@
                 url += "&__my_ajax__="+new Date();
             }
          }
-         console.log(opts);
+         // console.log(opts);
          // 建立与服务端的连接
          xhr.open(method,opts.url,async);
          // 设置 POST 请求需要的header
@@ -56,7 +56,6 @@
                     if(dataType.toLowerCase() == "jsonp"){
                         str += opts.jsonp +"="+opts.jsonpCallback;
                     }
-                    alert(str);
                     return str;
                 })(data);
         }
@@ -66,16 +65,11 @@
          xhr.onreadystatechange = function(){
             if(xhr.readyState === 4){
                 if(xhr.status === 200){
-                      // dataType: 'jsonp',
-                      // type: "GET",
-                      // jsonp: 'cb',
-                      // jsonpCallback: "cb99",
                     if(opts.success){
                         var arg = xhr.responseText;
-                        if(contentType === "application/json"){
+                        if(contentType === "application/json" || dataType === "json"){
                             arg = JSON.parse(xhr.responseText)
                         }
-
                         opts.success(arg);
                     }
                 }else{
