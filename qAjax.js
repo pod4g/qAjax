@@ -3,6 +3,7 @@
     /*
         原生ajax函数。用法与jquery ajax一致。
         author:pod4g
+        版本:1.0
     */
     function ajax(opts){
          var xhr = new XMLHttpRequest(),// 获取ajax对象
