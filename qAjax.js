@@ -52,7 +52,7 @@ function ajax(opts){
                     ret += prop + "=" + val[i] + "&";
                  }
             }else{
-                ret += prop + "=" + data[prop] + "&";
+                ret += prop + "=" + val + "&";
             }
         }
         return ret;
