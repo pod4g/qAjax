@@ -84,7 +84,7 @@ function ajax(opts){
                 if(type(success) === "function"){
                     success(text);
                 }
-                // 执行完毕之后，磨除JSONP标记
+                // 执行完毕之后，抹除JSONP标记
                 window[callbackParamValue] = undefined;
                 document.body.removeChild(__script__);
              }
