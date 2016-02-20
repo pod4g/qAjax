@@ -1,6 +1,8 @@
  /*
     原生ajax函数。用法与jquery ajax一致。
     author:pod4g
+    修改时间:2016,02,20
+    版本:1.1
 */
 function ajax(opts){
      var xhr,// 获取ajax对象
